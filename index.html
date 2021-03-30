@@ -9,14 +9,25 @@
         <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="range" min="1" max="20" step="0.25" value="10.25" class="slider"> <span>"10.25%"</span> <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        Amount <input type="number"  id="principal" name="Amount" onsubmit="return validateform()">  <br/>
 
+        Rate <input type="range" min="1" max="20" step="0.25" value="10.25" 
+        onChange="sliderchange();" class="slider" id="rate"> <br/>
+        <p>Value: <span id="lab8rate" style="background-color: #FFFF00">10.25</span>% </p>
+
+        No. of Years <br/><option value="value1"></option>Options 1-10</option></option>
+        <input type="number"  onChange="convertactualyear();" id="years">  <br/>
+        <p>Year: <span id="ActualYear" style="background-color: #FFFF00"></span></p>
+
+        Interest : <span id="result" style="background-color: #FFFF00"></span><br/>
         <button onclick="compute()">Compute Interest</button>
-            <span "" id="result">
-                <footer>&copy;Copyright 2021</footer>
+            <span id="result1">
+                <p>Notice: <br/></p>
+                <span id="pt"></span>
+                <span id="rt"></span>
+                <span id="it"></span>
+                <span id="yt"></span></br>
+                <footer></br>&copy;Copyright 2021</footer>
         </div>
     </body>
 </html>
